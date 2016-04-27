@@ -1,45 +1,39 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Laravel</title>
+@extends('layouts.master')
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+@section('content')
+<div class="row">
+    <div class="col-md-3">
+      <div class="blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+            <h4>About</h4>
+            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+          </div>
+       </div>
+    </div>
 
-        <style>
-            html, body {
-                height: 100%;
-            }
+    <div class="col-md-6 _center">
+d
+    </div>
 
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
-
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
-
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
-
-            .title {
-                font-size: 96px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">munkhuu</div>
-            </div>
+    <div class="col-md-3">
+      <div class="blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+            <h4>About</h4>
+            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+          </div>
+       </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-5 _maxcount">
+        <div class="row">
+            <div clss="col-md-"></div>
         </div>
-    </body>
-</html>
+    </div>
+    <div class="col-md-5 col-md-offset-2 _newarticles">
+        <div class="row">
+
+        </div>
+    </div>
+</div>
+@endsection
