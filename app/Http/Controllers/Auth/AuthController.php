@@ -42,7 +42,9 @@ class AuthController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|max:255',
+            'f_name' => 'required|max:255',
+            'l_name' => 'required|max:255',
+            'type' => 'required',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|confirmed|min:6',
         ]);
@@ -56,10 +58,29 @@ class AuthController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
-        ]);
+        if(isset($data['image'])){
+            $name = uniqid().$data['image']->getClientOriginalName();
+            $data['image']->move('uploads', $name);
+            
+            return User::create([
+                'f_name' => $data['f_name'],
+                'l_name' => $data['l_name'],
+                'image' => $name,
+                'type' => $data['type'],
+                'email' => $data['email'],
+                'password' => bcrypt($data['password']),
+            ]);
+        }
+        else {
+            return User::create([
+                'f_name' => $data['f_name'],
+                'l_name' => $data['l_name'],
+                'image' => 'user.png',
+                'type' => $data['type'],
+                'email' => $data['email'],
+                'password' => bcrypt($data['password']),
+            ]);
+        }
+        
     }
 }

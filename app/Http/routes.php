@@ -11,6 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group(['middleware' => 'auth'], function() {
+	Route::get('/new', 'ArticlesController@create');
+	Route::post('/articles/add', 'ArticlesController@store');
 });
+
+
+Route::get('/', 'PageController@index');
+
+Route::post('login', 'Auth\AuthController@postLogin');
+Route::get('logout', 'Auth\AuthController@getLogout');
+
+Route::post('register', 'Auth\AuthController@postRegister');
