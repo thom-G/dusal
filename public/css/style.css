@@ -24,6 +24,9 @@ body{
 	padding-left: 5%;
 	background-color: yellow;
 }
+._minheight{
+  min-height: 472px;
+}
 footer{
 	background-color: #b2b2b2;
 	margin-top: 30px;
@@ -35,7 +38,42 @@ footer{
 	float: left;
 	padding-right: 15px;
 }
-
+/* Event */
+._viewevent h4{
+  text-align: center;
+}
+._viewevent ul li{
+  list-style: none;
+  margin-left: -17%;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+._viewevent ul li a{
+  float: right;
+}
+._oneevent{
+  padding-top: 30px;
+}
+._oneevent h3{
+  text-align: center;
+}
+._oneevent label{
+  text-align: right;
+}
+._allevent{
+  padding-top: 15px;
+  min-height: 472px;
+}
+._allevent h3{
+  padding-top: 10px;
+}
+._bottobrder{
+  border-bottom: 1px solid silver;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+/* end event*/
 @import url(http://fonts.googleapis.com/css?family=Roboto);
 
 /****** LOGIN MODAL ******/

@@ -10,12 +10,13 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use DB;
 use App\Http\Controllers\redirectTo;    
+use App\Event;
 
 class EventController extends Controller
 {
     public function create()
     {
-        $event = DB::table('events')->get();
+        $event = new Event;
         $input = Request::all();
 
         $event->title = $input['title'];
@@ -29,16 +30,19 @@ class EventController extends Controller
         $event->when_time = $input['when_time'];
 
         $event->save();
-        // $event = DB::table('events')->insert(
-        //     array(
-        //         'id'=> $group_id ,
-        //         'name' => $input['name'],
-        //         // 'member' => $input['member'],
-        //         'super_admin_id' => $user,
-        //         'privacy' => $input['privacy']
-        //         )
-        //     );
-
         return Redirect::to('/dashboard');
+    }
+    public function show($id)
+    {
+        $item = Event::findOrFail($id);
+        return view('pages.event')->withEvent($item);
+    }
+    public function index()
+    {
+        $events = DB::table('events')
+            ->orderBy('created_at', 'desc')
+            ->get();
+
+        return view('pages.events')->withEvents($events);
     }
 }
