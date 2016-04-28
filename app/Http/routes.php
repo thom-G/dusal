@@ -16,6 +16,7 @@ Route::group(['middleware' => 'auth'], function() {
 	Route::post('/articles/add', 'ArticlesController@store');
 });
 
+<<<<<<< HEAD
 
 Route::get('/', 'PageController@index');
 
@@ -23,3 +24,8 @@ Route::post('login', 'Auth\AuthController@postLogin');
 Route::get('logout', 'Auth\AuthController@getLogout');
 
 Route::post('register', 'Auth\AuthController@postRegister');
+=======
+Route::get('/dashboard', 'AdminController@getAdmin');
+Route::get('/dashboard/events/create', 'AdminController@getEventCreate');
+Route::post('/dashboard/events/create/create', 'EventController@create');
+>>>>>>> 096ddb7f4f532627844779e15283f1c6d136d164
