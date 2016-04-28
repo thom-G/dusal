@@ -25,14 +25,14 @@ d
     </div>
 </div>
 <div class="row">
-    <div class="col-md-5 _maxcount">
-        <div class="row">
-            <div clss="col-md-"></div>
+    <div class="col-md-6 _maxcount">
+        <div class="row _maxc">
+           f <div clss="col-md-"></div>
         </div>
     </div>
-    <div class="col-md-5 col-md-offset-2 _newarticles">
-        <div class="row">
-
+    <div class="col-md-6 _newarticles">
+        <div class="row _nart">
+          f
         </div>
     </div>
 </div>
