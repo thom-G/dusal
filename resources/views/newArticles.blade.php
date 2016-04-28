@@ -17,8 +17,8 @@
 				    </div>
 
 				    <div class="form-group">
-				        <label for="email">Бүтээлийн файл (pdf) :</label>
-				        <input type="file" class="form-control"  name="file" value="" required>
+				        <label for="email" >Бүтээлийн файл (pdf) :</label>
+				        <input type="file" accept="application/pdf" class="form-control"  name="file" value="" required>
 				    </div>
 
 				    <div class="form-group">

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use DB;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -16,9 +16,21 @@ class PageController extends Controller
      */
     public function index()
     {
-    //     $last = DB::table('articles')
-    //             ->
-        return view('welcome');
+        $last = DB::table('articles')
+                ->join('articles_category', 'category_id', '=', 'articles_category.cat_id')
+                ->where('articles.active', '=', 1)
+                ->orderBy('created_at', 'desc')
+                ->take(3)
+                ->get();
+
+        $most = DB::table('articles')
+                ->join('articles_category', 'category_id', '=', 'articles_category.cat_id')
+                ->where('articles.active', '=', 1)
+                ->orderBy('clicked', 'desc')
+                ->take(3)
+                ->get();
+
+        return view('welcome')->withLast($last)->withMost($most);
     }
 
     /**

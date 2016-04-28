@@ -8,7 +8,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <a class="navbar-brand" href="/">Project name</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -16,41 +16,41 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Математик <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Судалгааны бүтээл</a></li>
-                <li><a href="#">Эрдэм шинжилгээний хурлын илтгэл, эмхтгэл</a></li>
-                <li><a href="#">Лекц</a></li>
+                <li><a href="/article/category/1/1">Судалгааны бүтээл</a></li>
+                <li><a href="/article/category/1/2">Эрдэм шинжилгээний хурлын илтгэл, эмхтгэл</a></li>
+                <li><a href="/article/category/1/3">Лекц</a></li>
               </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Физик <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Судалгааны бүтээл</a></li>
-                <li><a href="#">Эрдэм шинжилгээний хурлын илтгэл, эмхтгэл</a></li>
-                <li><a href="#">Лекц</a></li>
+                <li><a href="/article/category/2/1">Судалгааны бүтээл</a></li>
+                <li><a href="/article/category/2/2">Эрдэм шинжилгээний хурлын илтгэл, эмхтгэл</a></li>
+                <li><a href="/article/category/2/3">Лекц</a></li>
               </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Хими <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Судалгааны бүтээл</a></li>
-                <li><a href="#">Эрдэм шинжилгээний хурлын илтгэл, эмхтгэл</a></li>
-                <li><a href="#">Лекц</a></li>
+                <li><a href="/article/category/3/1">Судалгааны бүтээл</a></li>
+                <li><a href="/article/category/3/2">Эрдэм шинжилгээний хурлын илтгэл, эмхтгэл</a></li>
+                <li><a href="/article/category/3/3">Лекц</a></li>
               </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Газарзүй, Геологи <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Судалгааны бүтээл</a></li>
-                <li><a href="#">Эрдэм шинжилгээний хурлын илтгэл, эмхтгэл</a></li>
-                <li><a href="#">Лекц</a></li>
+                <li><a href="/article/category/4/1">Судалгааны бүтээл</a></li>
+                <li><a href="/article/category/4/2">Эрдэм шинжилгээний хурлын илтгэл, эмхтгэл</a></li>
+                <li><a href="/article/category/4/3">Лекц</a></li>
               </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ХАА, Биологи <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Судалгааны бүтээл</a></li>
-                <li><a href="#">Эрдэм шинжилгээний хурлын илтгэл, эмхтгэл</a></li>
-                <li><a href="#">Лекц</a></li>
+                <li><a href="/article/category/5/1">Судалгааны бүтээл</a></li>
+                <li><a href="/article/category/5/2">Эрдэм шинжилгээний хурлын илтгэл, эмхтгэл</a></li>
+                <li><a href="/article/category/5/3">Лекц</a></li>
               </ul>
             </li>
           </ul>

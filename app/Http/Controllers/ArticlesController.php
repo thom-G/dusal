@@ -6,6 +6,7 @@ use Request;
 use App\Http\Controllers\Controller;
 use App\Articles;
 use Auth;
+use DB;
 
 class ArticlesController extends Controller
 {
@@ -79,6 +80,21 @@ class ArticlesController extends Controller
     public function show($id)
     {
         $item = Articles::findOrFail($id);
+        $num = $item->clicked;
+        $item->clicked = $num+1;
+        $item->save();
+
+        return $item;
+    }
+
+    public function category($id, $s_id)
+    {
+        $result = DB::table('articles')
+                ->where('category_id', $id)
+                ->where('sub_id', $s_id)
+                ->get();
+
+        return var_dump($result);
 
         return $item;
     }
