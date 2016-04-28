@@ -12,4 +12,56 @@
 	min-height: 60px;
 	max-width: 455px;
 }
+._eventedit textarea{
+	max-height: 280px;
+	min-height: 60px;
+	max-width: 455px;
+} 	
+._aaevnt h3{
+	text-align: center;
+}
+._aevs{
+	margin-left: 3%;
+	margin-right: 3%;
+}
+._aevs table, th, td {
+    border-bottom: 1px solid #222d32;
+    /*border-collapse: collapse;*/
+}
+._aevs th, td {
+    padding: 5px;
+    text-align: left;
+}
+._aevs table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+._aevs table#t01 tr:nth-child(odd) {
+   background-color:#fff;
+}
+._aevs table#t01 th	{
+    background-color: #222d32;
+    color: white;
+}
+._evtit{
+	min-width: 200px;
+}
+._evauth{
+	min-width: 170px;
+}
+._evwher{
+	min-width: 100px;
+}
+._eventedit{
+	padding-top: 15px;
+}
+._eventedit h4{
+	text-align: center;
+}
+._eventedit label{
+	text-align: right;
+}
 /* end event*/
+/* requisted articles*/
+._artreq h4{
+	text-align: center;
+}

@@ -139,4 +139,13 @@ class ArticlesController extends Controller
             return 'cant delete';
         }
     }
+    public function getArticlesRequists()
+    {
+        $articles = DB::table('articles')
+            ->where('active', '=', 0)
+            ->orderBy('created_at', 'desc')
+            ->get();
+
+        return view('admin.requists')->withArticle($articles);
+    }
 }
