@@ -12,7 +12,7 @@
     </div>
 
     <div class="col-md-6 _center">
-d
+      d
     </div>
 
     <div class="col-md-3">
