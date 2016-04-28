@@ -7,7 +7,10 @@ use DB;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Events;
+<<<<<<< HEAD
 
+=======
+>>>>>>> a29293815c12e478a239c1187190ba88a8318cb8
 class PageController extends Controller
 {
     /**
@@ -17,7 +20,10 @@ class PageController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
 
+=======
+>>>>>>> a29293815c12e478a239c1187190ba88a8318cb8
         $last = DB::table('articles')
                 ->join('articles_category', 'category_id', '=', 'articles_category.cat_id')
                 ->where('articles.active', '=', 1)
@@ -31,6 +37,7 @@ class PageController extends Controller
                 ->orderBy('clicked', 'desc')
                 ->take(3)
                 ->get();
+<<<<<<< HEAD
         $event = DB::table('events')
                 ->orderBy('created_at', 'desc')
                 ->get();
@@ -38,6 +45,13 @@ class PageController extends Controller
         return view('welcome')->withLast($last)->withMost($most)->withEvent($event);
 
 
+=======
+
+        $event = DB::table('events')
+                ->orderBy('created_at', 'desc')
+                ->get();
+        return view('welcome')->with('event', $event)->withMost($most)->withLast($last);
+>>>>>>> a29293815c12e478a239c1187190ba88a8318cb8
     }
 
     /**

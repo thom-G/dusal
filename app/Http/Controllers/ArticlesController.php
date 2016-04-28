@@ -79,12 +79,18 @@ class ArticlesController extends Controller
      */
     public function show($id)
     {
+        $items = DB::table('articles')
+                ->join('articles_category', 'articles.category_id', '=', 'articles_category.cat_id')
+                ->join('sub_category', 'articles.sub_id', '=', 'sub_category.subcat_id')
+                ->where('articles.id', $id)
+                ->first();
+
         $item = Articles::findOrFail($id);
         $num = $item->clicked;
         $item->clicked = $num+1;
         $item->save();
 
-        return $item;
+        return view('pages.article')->withItem($items);
     }
 
     public function category($id, $s_id)
@@ -94,9 +100,15 @@ class ArticlesController extends Controller
                 ->where('sub_id', $s_id)
                 ->get();
 
-        return var_dump($result);
+        $cat = DB::table('articles_category')
+                ->where('cat_id', $id)
+                ->first();
 
-        return $item;
+        $sub = DB::table('sub_category')
+                ->where('subcat_id', $s_id)
+                ->first();
+
+        return view('pages.category')->withResults($result)->withCat($cat)->withSub($sub);
     }
 
     /**
