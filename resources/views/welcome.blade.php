@@ -38,6 +38,7 @@
        </div>
     </div>
 
+    <div class="container">
     <div class="row">
       <div class="col-md-5">
         <h3 id = "birder">Хамгийн их хандалттай бүтээл</h3>
@@ -63,7 +64,7 @@
           <br><br>
           <hr>
         @endforeach
-
+</div>
       </div>
     </div>
 </div>

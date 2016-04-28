@@ -64,7 +64,7 @@
                       <li><a href="#">Profile</a></li>
                       <li><a href="/logout">Logout</a></li>
                     @elseif(Auth::user()->type == 1)
-                      <li><a href="#">Dashboard</a></li>
+                      <li><a href="/dashboard">Dashboard</a></li>
                       <li><a href="/logout">Logout</a></li>
                     @else 
                       <li><a href="#">Profile</a></li>
