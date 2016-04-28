@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/dashboard', 'AdminController@getAdmin');
+Route::get('/dashboard/events/create', 'AdminController@getEventCreate');
+Route::post('/dashboard/events/create/create', 'EventController@create');
