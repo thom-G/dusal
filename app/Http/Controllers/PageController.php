@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use App\Events;
+use DB;
 class PageController extends Controller
 {
     /**
@@ -18,7 +19,10 @@ class PageController extends Controller
     {
     //     $last = DB::table('articles')
     //             ->
-        return view('welcome');
+        $event = DB::table('events')
+                ->orderBy('created_at', 'desc')
+                ->get();
+        return view('welcome')->with('event', $event);
     }
 
     /**

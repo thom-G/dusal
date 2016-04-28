@@ -5,7 +5,7 @@
 
     @include('partails.nav')
 
-    <div class="container">
+    <div class="container _minheight">
 
 	@yield('content')      
 

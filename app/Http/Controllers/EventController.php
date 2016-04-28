@@ -32,4 +32,17 @@ class EventController extends Controller
         $event->save();
         return Redirect::to('/dashboard');
     }
+    public function show($id)
+    {
+        $item = Event::findOrFail($id);
+        return view('pages.event')->withEvent($item);
+    }
+    public function index()
+    {
+        $events = DB::table('events')
+            ->orderBy('created_at', 'desc')
+            ->get();
+
+        return view('pages.events')->withEvents($events);
+    }
 }
