@@ -2,7 +2,6 @@
 <html lang="en">
   @include('partails.head')
   <body>
-
     @include('partails.nav')
 
     <div class="container _minheight">

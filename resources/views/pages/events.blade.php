@@ -3,7 +3,7 @@
 @section('content')
 <div class="_allevent">
 	<div class="row">
-		<h4>Бүх үйл ажиллагаа</h4><hr>
+		<h4>Бүх хурлын тов</h4><hr>
 	</div>
 	@foreach($events as $event)
 	<div class="row">
