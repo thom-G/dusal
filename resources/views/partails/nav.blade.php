@@ -55,14 +55,34 @@
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">  <span class="glyphicon glyphicon-user"></span>
-                <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li data-toggle="modal" data-target="#loginModal"><a href="#">Нэвтрэх</a></li>
-                <li data-toggle="modal" data-target="#registerModal"><a href="#">Бүртгүүлэх</a></li>
-              </ul>
-            </li>
+            @if(Auth::check())
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">  <img src="/uploads/{{Auth::user()->image}}" width="30" height="30">
+                    <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    @if(Auth::user()->type == 2)
+                      <li><a href="#">Profile</a></li>
+                      <li><a href="/logout">Logout</a></li>
+                    @elseif(Auth::user()->type == 1)
+                      <li><a href="#">Dashboard</a></li>
+                      <li><a href="/logout">Logout</a></li>
+                    @else 
+                      <li><a href="#">Profile</a></li>
+                      <li><a href="/new">Бүтээл нэмэх</a></li>
+                      <li><a href="/logout">Logout</a></li>
+                    @endif
+                  </ul>
+                </li>
+            @else 
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">  <span class="glyphicon glyphicon-user"></span>
+                  <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li data-toggle="modal" data-target="#loginModal"><a href="#">Нэвтрэх</a></li>
+                  <li data-toggle="modal" data-target="#registerModal"><a href="#">Бүртгүүлэх</a></li>
+                </ul>
+              </li>
+            @endif
 {{--             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ХАА, Биологи <span class="caret"></span></a>
               <ul class="dropdown-menu">
@@ -89,10 +109,18 @@
         <h4 class="modal-title">Нэвтрэх</h4>
       </div>
       <div class="modal-body">
-        <p>Some text in the modal.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <form role="form" action="/login" method="post">
+          {!! csrf_field() !!}
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+          </div>
+          <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name = "password">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
       </div>
     </div>
 
@@ -110,10 +138,45 @@
         <h4 class="modal-title">Бүртгүүлэх</h4>
       </div>
       <div class="modal-body">
-        <p>Some text in the modal.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <form role="form" action="/register" method="post" enctype="multipart/form-data">
+          {!! csrf_field() !!}
+          <div class="form-group">
+            <label for="email">First Name:</label>
+            <input type="text" class="form-control" id="f_name" placeholder="Enter first name" name="f_name">
+          </div>
+          <div class="form-group">
+            <label for="email">Last Name:</label>
+            <input type="text" class="form-control" id="f_name" placeholder="Enter last name" name="l_name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+          </div>
+          <div class="form-group">
+            <label for="email">Type:</label>
+            <select name = "type">
+              <option value="2">
+                Хэрэглэгч
+              </option>
+              <option value="3">
+                Зохиолч
+              </option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="pwd">Profile Picture:</label>
+            <input type="file" class="form-control" id="pwd" name = "image">
+          </div>
+          <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name = "password">
+          </div>
+          <div class="form-group">
+            <label for="pwd">Password Confirmation:</label>
+            <input type="password" class="form-control" id="pwd" placeholder="Confirm password" name="password_confirmation">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
       </div>
     </div>
 
