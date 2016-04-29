@@ -2,33 +2,31 @@
 
 @section('content')
 <div class="row">
-{{--     <div class="col-md-3">
-      <div class="blog-sidebar _holsites">
-          <div class="sidebar-module sidebar-module-inset">
-            <h4>Холбогдолтой сайтууд</h4><hr>
-            <ul>
-              <li><a href="http://www.mne.mn" target="_blank">Монгол Улсын Байгаль Орчны Яам</a></li>
-              <li><a href="http://www.arigsor.mn" target="_blank">Байгаль орчны лавлах</a></li>
-              <li><a href="http://www.icc.mn" target="_blank">Ус цаг уур, орчны судалгаа, мэдээллийн хүрээлэн</a></li>
-              <li><a href="http://www.eic.mn/" target="_blank">Байгаль орчны мэдээллийн сан</a></li>
-            </ul>
-          </div>
-       </div>
-    </div>
-<<<<<<< HEAD
 
-    <div class="col-md-6 _center">
+    <div class="col-md-7 _center">
       <form action="/search" method="post">
           {!! csrf_field() !!}
-          <input type = "text" name = "search">
-          <input type="submit"> `1
+          <div class="container">
+          <div class="row">
+              <div class="col-md-7">
+                  <div id="custom-search-input">
+                      <div class="input-group col-md-12">
+                          <input type="text" class="form-control input-lg" placeholder="Buscar" />
+                          <span class="input-group-btn">
+                              <button class="btn btn-info btn-lg" type="button">
+                                  <i class="glyphicon glyphicon-search"></i>
+                              </button>
+                          </span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
       </form>
-=======
- --}}
-    <div class="col-md-9 _left">
     </div>
 
-    <div class="col-md-3">
+
+    <div class="col-md-3 col-md-offset-2">
       <div class="blog-sidebar">
           <div class="sidebar-module sidebar-module-inset _viewevent">
             <h4>ЭШ хурлын тов</h4>
