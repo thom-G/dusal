@@ -4,6 +4,8 @@
 
 	<div class="_allevent">
 		<div class="row">
+			<h4>Хайлтын үр дүн</h4><hr>
+			<span>Таны хайсан үг:</span><span> <b> {{$array[0]}}</b></span>
 		</div>
 		@foreach($results as $event)
 			<div class="row">

@@ -60,7 +60,7 @@ class ArticlesController extends Controller
 
         $result->get();
 
-        return view('pages.search')->withResults($result->get());
+        return view('pages.search')->withResults($result->get())->with('array', $array);
     }
 
     public function viewpdf($id)
