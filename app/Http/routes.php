@@ -27,6 +27,9 @@ Route::post('register', 'Auth\AuthController@postRegister');
 Route::get('/dashboard', 'AdminController@getAdmin');
 Route::get('/dashboard/events/create', 'AdminController@getEventCreate');
 Route::post('/dashboard/events/create/create', 'EventController@create');
+Route::get('/dashboard', 'AdminController@getAdmin');
+Route::get('/dashboard/events/create', 'AdminController@getEventCreate');
+Route::post('/dashboard/events/create/create', 'EventController@create');
 
 Route::get('/dashboard', 'AdminController@getAdmin');
 Route::get('/dashboard/events/create', 'AdminController@getEventCreate');

@@ -7,27 +7,21 @@
 			<li><a href="">Сайтын тухай</a></li>
 			<li><a href="">Холбоо барих</a></li>
 			<li><a href="">Тусламж</a></li>
-	
-			<li><a href="">Хайх</a></li>
-			<li><a href="">Бүртгүүлэх</a></li>
-			<li><a href="">Нэвтрэх</a></li>
 		</ul>
 	</div>
 	<div class="row">
-		<div class="col-md-5">
-			<ul>
-				<li>Хэйабө</li>
-				<li><a href="">Нууцлалын бодлого</a> | <a href="">Үйлчилгээний нөхцөл</a></li>
-				<li><a href="">THOM team -д бүтээв</a></li>
-				<li>2016 © All Rights Reserved.</li>
-			</ul>
-		</div>
+		<ul class="col-md-4">
+			<li>Байгалийн шинжлэх ухааны салбарын цахим сан</li>
+			<li><a href="">Нууцлалын бодлого</a> | <a href="">Үйлчилгээний нөхцөл</a></li>
+			<li><a href="">THOM team</a> -д бүтээв</li>
+			<li>2016 © All Rights Reserved.</li>
+		</ul>
 		<div class="col-md-2"></div>
-		<div class="col-md-5">
+		<div class="col-md-1 col-md-offset-5">
 			<div class="_social-media">
 				<a href="#"><span>Facebook</span></a>
 				<a href="#"><span>Twitter</span></a>
-				<a href="#"><span>Linked In</span></a>
+				{{-- <a href="#"><span>Linked In</span></a> --}}
 			</div>
 		</div>
 
