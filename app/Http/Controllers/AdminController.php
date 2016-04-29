@@ -21,6 +21,11 @@ class AdminController extends Controller
     }
     public function getEventCreate()
     {
-        return view('admin.eventcreate');
+        if(Auth::user()->type == 1){
+            return view('admin.eventcreate');
+        }
+        else {
+            return redirect('/');
+        }
     }
 }

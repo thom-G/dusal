@@ -22,18 +22,41 @@ class ArticlesController extends Controller
 
     public function search(Request $request){
 
-        $result = Request::all();
-        $array = explode(' ', $result['search']);
+        $s = Request::all();
+        $array = explode(' ', $s['search']);
 
         $result = DB::table('articles');
         $result->where('active', 1);
 
-        for($i = 0; $i<sizeof($array); $i++){
-            $result->where('title', 'LIKE', '%'.$array[$i].'%')
-                   ->orWhere('search_keys', 'LIKE', '%'.$array[$i].'%')
-                   ->orWhere('some_text', 'LIKE', '%'.$array[$i].'%')
-                   ->orWhere('publisher_name', 'LIKE', '%'.$array[$i].'%');
+        if($s['type'] == 1){
+            for($i = 0; $i<sizeof($array); $i++){
+                $result->where('title', 'LIKE', '%'.$array[$i].'%')
+                       ->orWhere('search_keys', 'LIKE', '%'.$array[$i].'%')
+                       ->orWhere('some_text', 'LIKE', '%'.$array[$i].'%')
+                       ->orWhere('publisher_name', 'LIKE', '%'.$array[$i].'%');
+            }
         }
+        else if($s['type'] == 2){
+            for($i = 0; $i<sizeof($array); $i++){
+                $result->where('title', 'LIKE', '%'.$array[$i].'%');
+            }
+        }
+        else if($s['type'] == 3){
+            for($i = 0; $i<sizeof($array); $i++){
+                $result->where('search_keys', 'LIKE', '%'.$array[$i].'%');
+            }
+        }
+        else if($s['type'] == 4){
+            for($i = 0; $i<sizeof($array); $i++){
+                $result->where('some_text', 'LIKE', '%'.$array[$i].'%');
+            }
+        }
+        else {
+            for($i = 0; $i<sizeof($array); $i++){
+                $result->where('publisher_name', 'LIKE', '%'.$array[$i].'%');
+            }
+        }
+        
 
         $result->get();
 

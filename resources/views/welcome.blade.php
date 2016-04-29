@@ -15,17 +15,19 @@
                       <div class="input-group col-md-12">
                         <div class="input-group-btn">
                           <div class="styled-select blue">
-                            <select>
-                              <option>Шүүлтүүр</option>
-                              <option>The second option</option>
-                              <option>The third option</option>
+                            <select name = "type">
+                              <option value="1">Бүгд</option>
+                              <option value="2">Гарчиг</option>
+                              <option value="3">Түлхүүр үг</option>
+                              <option value="4">Товч тайлбар</option>
+                              <option value="5">Зохиолчоор</option>
                             </select>
                           </div>
 
                         </div>
-                        <input type="text" class="form-control input-lg" placeholder="Хайх үгээ оруулна уу" />
+                        <input type="text" class="form-control input-lg" name = "search" placeholder="Хайх үгээ оруулна уу" />
                         <span class="input-group-btn">
-                            <button class="btn btn-primary btn-lg" type="button">
+                            <button class="btn btn-primary btn-lg" type="submit">
                                 <i class="glyphicon glyphicon-search"></i>
                             </button>
                         </span>
