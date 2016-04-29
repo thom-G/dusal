@@ -20,6 +20,26 @@ class ArticlesController extends Controller
         //
     }
 
+    public function search(Request $request){
+
+        $result = Request::all();
+        $array = explode(' ', $result['search']);
+
+        $result = DB::table('articles');
+        $result->where('active', 1);
+
+        for($i = 0; $i<sizeof($array); $i++){
+            $result->where('title', 'LIKE', '%'.$array[$i].'%')
+                   ->orWhere('search_keys', 'LIKE', '%'.$array[$i].'%')
+                   ->orWhere('some_text', 'LIKE', '%'.$array[$i].'%')
+                   ->orWhere('publisher_name', 'LIKE', '%'.$array[$i].'%');
+        }
+
+        $result->get();
+
+        return view('pages.search')->withResults($result->get());
+    }
+
     public function viewpdf($id)
     {
         $item = Articles::findOrFail($id);
