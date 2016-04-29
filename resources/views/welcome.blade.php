@@ -4,7 +4,6 @@
 <div>
   <div class="row">
 
-<<<<<<< HEAD
     <div class="col-md-7 _left">
       <div>
       <form action="/search" method="post">
@@ -23,35 +22,6 @@
                           </select>
                         </div>
 
-=======
-      <div class="col-md-7 _left">
-        <div>
-        <form action="/search" method="post">
-            {!! csrf_field() !!}
-            <div class="container">
-            <div class="row">
-                <div class="col-md-7">
-                    <div>
-                      <div class="input-group col-md-12">
-                        <div class="input-group-btn">
-                          <div class="styled-select blue">
-                            <select name = "type">
-                              <option value="1">Бүгд</option>
-                              <option value="2">Гарчиг</option>
-                              <option value="3">Түлхүүр үг</option>
-                              <option value="4">Товч тайлбар</option>
-                              <option value="5">Зохиолчоор</option>
-                            </select>
-                          </div>
-
-                        </div>
-                        <input type="text" class="form-control input-lg" name = "search" placeholder="Хайх үгээ оруулна уу" />
-                        <span class="input-group-btn">
-                            <button class="btn btn-primary btn-lg" type="submit">
-                                <i class="glyphicon glyphicon-search"></i>
-                            </button>
-                        </span>
->>>>>>> 908ad54810993fa35e19d4840c4e50b6e01d64cb
                       </div>
                       <input type="text" class="form-control input-lg" placeholder="Хайх үгээ оруулна уу" />
                       <span class="input-group-btn">
