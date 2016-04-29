@@ -11,7 +11,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">Project name</a>
+          <a class="navbar-brand" href="/"><img src="{{asset("img/brand.png")}}"></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -60,7 +60,7 @@
           <ul class="nav navbar-nav navbar-right">
             @if(Auth::check())
                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">  <img src="/uploads/{{Auth::user()->image}}" width="30" height="30">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">  <img src="/uploads/{{Auth::user()->image}}" class="_userimg" width="30" height="30">
                     <span class="caret"></span></a>
                   <ul class="dropdown-menu">
                     @if(Auth::user()->type == 2)

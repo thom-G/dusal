@@ -6,7 +6,7 @@ body{
   font-family: helvetica, arial, sans-serif;
 }
 .top{
-  background-color: #17669E;
+  background-color: #FF6F69 ;
   height: 32px;
   padding-top: 7px;
 }
@@ -17,6 +17,16 @@ body{
 }
 .nav ul li a{
   font-family: helvetica, arial, sans-serif;
+}
+nav a img{
+  width: 40px;
+  height: 70px;
+  margin-top: -40px;
+}
+._userimg{
+  width: 30px;
+  height: 30px;
+  margin-top: 0px;
 }
 ._left{
 }
@@ -72,7 +82,7 @@ input{
 /* Event */
 ._viewevent h4{
   text-align: center;
-  background-color: #009B76;
+  background-color: #1768A0;
   padding-top: 5px;
   padding-bottom: 5px;
   margin-top: -15px;

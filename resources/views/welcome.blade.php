@@ -15,17 +15,13 @@
           </div>
        </div>
     </div>
-<<<<<<< HEAD
-
-    <div class="col-md-6 _center">
+ --}}
+    <div class="col-md-9 _left">
       <form action="/search" method="post">
           {!! csrf_field() !!}
           <input type = "text" name = "search">
-          <input type="submit"> `1
+          <input type="submit">
       </form>
-=======
- --}}
-    <div class="col-md-9 _left">
     </div>
 
     <div class="col-md-3">
