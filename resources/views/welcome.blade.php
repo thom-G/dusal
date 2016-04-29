@@ -4,72 +4,70 @@
 <div>
   <div class="row">
 
-      <div class="col-md-7 _left">
-        <div>
-        <form action="/search" method="post">
-            {!! csrf_field() !!}
-            <div class="container">
-            <div class="row">
-                <div class="col-md-7">
-                    <div>
-                      <div class="input-group col-md-12">
-                        <div class="input-group-btn">
-                          <div class="styled-select blue">
-                            <select>
-                              <option>Шүүлтүүр</option>
-                              <option>The second option</option>
-                              <option>The third option</option>
-                            </select>
-                          </div>
-
+    <div class="col-md-7 _left">
+      <div>
+      <form action="/search" method="post">
+          {!! csrf_field() !!}
+          <div class="container">
+          <div class="row">
+              <div class="col-md-7">
+                  <div>
+                    <div class="input-group col-md-12">
+                      <div class="input-group-btn">
+                        <div class="styled-select blue">
+                          <select>
+                            <option>Шүүлтүүр</option>
+                            <option>The second option</option>
+                            <option>The third option</option>
+                          </select>
                         </div>
-                        <input type="text" class="form-control input-lg" placeholder="Хайх үгээ оруулна уу" />
-                        <span class="input-group-btn">
-                            <button class="btn btn-primary btn-lg" type="button">
-                                <i class="glyphicon glyphicon-search"></i>
-                            </button>
-                        </span>
+
                       </div>
+                      <input type="text" class="form-control input-lg" placeholder="Хайх үгээ оруулна уу" />
+                      <span class="input-group-btn">
+                          <button class="btn btn-primary btn-lg" type="button">
+                              <i class="glyphicon glyphicon-search"></i>
+                          </button>
+                      </span>
                     </div>
-                </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </form>
+      </div>
+      <div class="_uthsrti">
+        <input class="btn btn-md btn-danger" value="13" type="button">
+        <span>ЗИХИОЛЧИЙН</span>
+        <input class="btn btn-md btn-danger" value="56" type="button"><span>БҮТЭЭЛ БАЙНА.</span>
+      </div>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-2">
+      <div class="blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset _viewevent">
+            <h4>ЭШ хурлын тов</h4>
+            <ul>
+              @foreach($event as $event)
+              
+                <li><div class="row">
+                  <span class="col-md-12">{{ $event->title }}</span>
+                  <small class="col-md-12">{{ $event->when_year}} - {{ $event->when_month}} - {{$event->when_day}} <a href="/event/{{$event->id}}">Дэлгэрэнгүй ...</a></small>
+                </div></li>
+              
+              @endforeach
+            </ul>
+            <div class="row">
+              <span class="col-md-12">
+                <a href="/events"><input type="button" class="btn btn-default btn-sm col-md-12" value="Бүх хурлын тов харах"/></a>
+              </span>
             </div>
           </div>
-        </form>
-        </div>
-        <div class="_uthsrti">
-          <input class="btn btn-md btn-danger" value="13" type="button">
-          <span>ЗИХИОЛЧИЙН</span>
-          <input class="btn btn-md btn-danger" value="56" type="button"><span>БҮТЭЭЛ БАЙНА.</span>
-        </div>
-      </div>
-
-
-      <div class="col-md-3 col-md-offset-2">
-        <div class="blog-sidebar">
-            <div class="sidebar-module sidebar-module-inset _viewevent">
-              <h4>ЭШ хурлын тов</h4>
-              <ul>
-                @foreach($event as $event)
-                
-                  <li><div class="row">
-                    <span class="col-md-12">{{ $event->title }}</span>
-                    <small class="col-md-12">{{ $event->when_year}} - {{ $event->when_month}} - {{$event->when_day}} <a href="/event/{{$event->id}}">Дэлгэрэнгүй ...</a></small>
-                  </div></li>
-                
-                @endforeach
-              </ul>
-              <div class="row">
-                <span class="col-md-12">
-                  <a href="/events"><input type="button" class="btn btn-default btn-sm col-md-12" value="Бүх хурлын тов харах"/></a>
-                </span>
-              </div>
-            </div>
-         </div>
-      </div>
-
+       </div>
+    </div>
   </div>
-
-  </div>
+</div>
   <div class="row">
       <div class="container">
       <div class="row">
@@ -110,4 +108,38 @@
       </div>
   </div>
 </div>
+  <div class="container-fluid">
+    <div class="row _supports">
+      <div class="col-md-1 col-md-offset-1">
+        <div class="_circle"><a href="http://zorigfoundation.org/" target="_blank"><img src="{{asset("img/zorigfoundation.png")}}"></a></div>
+      </div>
+      <div class="col-md-1">
+        <div class="_circle"><a href="http://zorigfoundation.org/efp/" target="_blank"><img src="{{asset("img/efp.jpg")}}"></a></div>
+      </div>
+      <div class="col-md-1">
+        <div class="_circle"><a href="http://www.xacbank.mn/" target="_blank"><img src="{{asset("img/hasbank.png")}}"></a></div>
+      </div>
+      <div class="col-md-1">
+        <div class="_circle"><a href="http://www.num.edu.mn/" target="_blank"><img src="{{asset("img/muis.jpg")}}"></a></div>
+      </div>
+      <div class="col-md-1">
+        <div class="_circle"><a href="http://mongolian.mongolia.usembassy.gov/" target="_blank"><img src="{{asset("img/us_emb.jpg")}}"></a></div>
+      </div>
+      <div class="col-md-1">
+        <div class="_circle"><a href="http://zorigfoundation.org/" target="_blank"><img src="{{asset("img/zorigfoundation.png")}}"></a></div>
+      </div>
+      <div class="col-md-1">
+        <div class="_circle"><a href="http://zorigfoundation.org/efp/" target="_blank"><img src="{{asset("img/efp.jpg")}}"></a></div>
+      </div>
+      <div class="col-md-1">
+        <div class="_circle"><a href="http://www.xacbank.mn/" target="_blank"><img src="{{asset("img/hasbank.png")}}"></a></div>
+      </div>
+      <div class="col-md-1">
+        <div class="_circle"><a href="http://www.num.edu.mn/" target="_blank"><img src="{{asset("img/muis.jpg")}}"></a></div>
+      </div>
+      <div class="col-md-1">
+        <div class="_circle"><a href="http://mongolian.mongolia.usembassy.gov/" target="_blank"><img src="{{asset("img/us_emb.jpg")}}"></a></div>
+      </div>
+    </div>
+  </div>
 @endsection
