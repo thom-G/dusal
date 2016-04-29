@@ -30,6 +30,14 @@ nav a img{
 }
 ._left{
 }
+._uthsrti{
+  padding-left: 10%;
+  padding-top: 35px;
+}
+._uthsrti span{
+  margin-left: 10px;
+  margin-right: 10px;
+}
 ._right{
 	background-color: blue;
 }
@@ -48,7 +56,7 @@ nav a img{
 	background-color: yellow;
 }
 ._minheight{
-  min-height: 472px;
+/*  min-height: 472px;*/
   margin-top: 32px;
 }
 footer{
@@ -67,6 +75,29 @@ footer{
 input{
   border-radius: 0px;
 }
+/* search */
+.styled-select {
+   height: 46px;
+   overflow: hidden;
+   width: 160px;
+  font-family: helvetica, arial, sans-serif;
+}
+._left{
+  font-family: helvetica, arial, sans-serif;
+
+}
+.styled-select select {
+   background: transparent;
+   border: none;
+   font-size: 16px;
+   height: 46px;
+   padding: 5px; /* If you add too much padding here, the options won't show in IE */
+   padding-left: 10px;
+   width: 268px;
+}
+.blue    { background-color: #337ab7; }
+.blue select    { color: #fff; }
+/* end select */
 /* holbootoi sites*/
 ._holsites h4{
   text-align: center;
@@ -245,4 +276,77 @@ hr {
 }
 #delgerengui{
   float: right;
+}
+
+.dropdown.dropdown-lg .dropdown-menu {
+    margin-top: -1px;
+    padding: 6px 20px;
+}
+.input-group-btn .btn-group {
+    display: flex !important;
+}
+.btn-group .btn {
+    border-radius: 0;
+    margin-left: -1px;
+}
+.btn-group .btn:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.btn-group .form-horizontal .btn[type="submit"] {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.form-horizontal .form-group {
+    margin-left: 0;
+    margin-right: 0;
+}
+.form-group .form-control:last-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+@media screen and (min-width: 768px) {
+    #adv-search {
+        width: 500px;
+        margin: 0 auto;
+    }
+    .dropdown.dropdown-lg {
+        position: static !important;
+    }
+    .dropdown.dropdown-lg .dropdown-menu {
+        min-width: 500px;
+    }
+}
+
+#custom-search-input{
+    padding: 3px;
+    border: solid 1px #E4E4E4;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+#custom-search-input input{
+    border: 0;
+    box-shadow: none;
+}
+
+#custom-search-input button{
+    margin: 2px 0 0 0;
+    background: none;
+    box-shadow: none;
+    border: 0;
+    color: #666666;
+    padding: 0 8px 0 10px;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input button:hover{
+    border: 0;
+    box-shadow: none;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input .glyphicon-search{
+    font-size: 23px;
 }

@@ -31,6 +31,7 @@ class PageController extends Controller
                 ->get();
         $event = DB::table('events')
                 ->orderBy('created_at', 'desc')
+                ->take(2)
                 ->get();
 
         return view('welcome')->withLast($last)->withMost($most)->withEvent($event);
